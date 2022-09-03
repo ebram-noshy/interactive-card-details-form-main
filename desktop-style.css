@@ -1,0 +1,121 @@
+body {
+    background-image: url(images/bg-main-desktop.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 28%;
+}
+
+#main-div {
+    display: flex;
+    flex-flow: row;
+    width: 85%;
+    height: 80%;
+}
+
+#cards-div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+#cards-div > div > div {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    height: 220px;
+}
+
+#front-card-info {
+    padding: 6%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+#big-circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--White);
+    margin-right: 12px;
+}
+
+#small-circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--White);
+}
+
+#CardNumber-display {
+    font-size: 26px;
+    letter-spacing: 0.2rem;
+    margin-bottom: 25px;
+}
+
+#Card-info-display {
+    display: flex;
+    flex-flow: row;
+    justify-content:
+    space-between;
+    font-size: small;
+    letter-spacing: 0.1rem;
+}
+
+#CVC-display {
+    text-align: end;
+    padding: 0px 50px;
+    padding-bottom: 4px;
+    font-size: small;
+    letter-spacing: 0.1rem;
+}
+
+.form-element {
+    margin-bottom: 24px;
+}
+
+button {
+    margin-top: 12px;
+    padding: 15px 0px;
+}
+
+.form-element > label {
+    font-size: small;
+}
+
+input {
+    padding: 10px 15px;
+}
+
+#form-div {
+    width: 50%;
+    height: 100%;
+}
+
+.card-img {
+    height: 220px;
+}
+
+#back-card {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+#form-div > div {
+    width: 400px;
+}
+
+#title {
+    letter-spacing: 0.1rem;
+}
+
+#subtitle {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,122 @@
+body {
+    background-image: url(images/bg-main-mobile.png);
+    background-size: contain;
+}
+
+#main-div {
+    display: flex;
+    flex-flow: column;
+}
+
+#cards-div {
+    display: flex;
+    flex-flow: column-reverse;
+    padding: 5%;
+    padding-top: 30px;
+    margin-bottom: -70px;
+}
+
+.card-img {
+    width: 80%;
+}
+
+#back-card-img {
+    float: right;
+}
+
+#front-card {
+    transform: translateY(-60px);
+}
+
+#front-card-info {
+    /* display: block; */
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+#big-circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: var(--White);
+    margin-right: 12px;
+}
+
+#small-circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 1px solid var(--White);
+}
+
+#CardNumber-display {
+    font-size: 15px;
+    letter-spacing: 0.2rem;
+    margin-bottom: 20px;
+}
+
+#Card-info-display {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+}
+
+#back-card > div {
+    position: relative;
+    display: table;
+    z-index: -1;
+}
+
+#CVC-display {
+    text-align: end;
+    padding: 0px 35px;
+    padding-bottom: 4px;
+    font-size: small;
+    letter-spacing: 0.1rem;
+}
+
+#form-div {
+    padding: 6%;
+}
+
+button {
+    margin-top: 0;
+    padding: 12px 0px;
+}
+
+.form-element > label {
+    font-size: 12px;
+}
+
+input {
+    padding: 8px 12px;
+}
+
+.form-element {
+    margin-bottom: 16px;
+}
+
+#form-complete {
+    width: 95%;
+    padding-top: 5px;
+}
+
+#form-complete img {
+    width: 75px;
+}
+
+#title {
+    letter-spacing: 0.2rem;
+}
+
+#subtitle {
+    margin-bottom: 50px;
+}

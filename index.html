@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link href="general-style.css" rel="stylesheet" />
+  <link href="desktop-style.css" media="screen and (min-width: 377px)" rel="stylesheet" />
+  <link href="mobile-style.css" media="screen and (max-width: 376px)" rel="stylesheet" />
+</head>
+<body>
+  <div id="main-div">
+    <div id="cards-div">
+      <div id="front-card">
+        <div>
+          <img class="card-img" src="images/bg-card-front.png" />
+          <div id="front-card-info">
+            <div style="flex-grow: 1;">
+              <div style="display: flex; flex-flow: row; align-items: center;">
+                <span id="big-circle"></span>
+                <span id="small-circle"></span>
+              </div>
+            </div>
+            <div id="CardNumber-display" data-display="CardNumber">0000 0000 0000 0000</div>
+            <div id="Card-info-display">
+              <div data-display="Name">Jane Appleseed</div>
+              <div><span data-display="Month">00</span>/<span data-display="Year">00</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="back-card">
+        <div>
+          <img id="back-card-img" class="card-img" src="images/bg-card-back.png" />
+          <div style="display: flex; flex-flow: column; justify-content: center;">
+            <div id="CVC-display" data-display="CVC">000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="form-div">
+      <div id="form-inputs">
+        <div class="form-element">
+          <label for="CardholderNameInput">Cardholder Name</label>
+          <div>
+            <input id="CardholderNameInput" type="text" placeholder="e.g. Jane Appleseed" data-field="Name" oninput="handleInputChange(this)" onchange="validateBlankInput(this)" onchange="validateBlankInput(this)" />
+            <div class="error" data-error-field="Name"></div>
+          </div>
+        </div>
+        <div class="form-element">
+          <label for="CardNumberInput">Card Number</label>
+          <div>
+            <input id="CardNumberInput" type="text" placeholder="e.g. 1234 5678 9123 0000" data-field="CardNumber" oninput="handleInputChange(this)" onchange="validateBlankInput(this)" />
+            <div class="error" data-error-field="CardNumber"></div>
+          </div>
+        </div>
+        <div id="two-column-div">
+          <div class="form-element">
+            <label for="ExpDateMonthInput">Exp. Date (MM/YY)</label>
+            <div>
+              <input id="ExpDateMonthInput" type="text" placeholder="MM" style="margin-right: 5px;" data-field="Month" oninput="handleInputChange(this)" onchange="validateBlankInput(this)" />
+              <input id="ExpDateYearInput" type="text" placeholder="YY" data-field="Year" oninput="handleInputChange(this)" onchange="validateBlankInput(this)" />
+              <div class="error" data-error-field="Month"></div>
+            </div>
+          </div>
+          <div class="form-element">
+            <label for="CVCInput">CVC</label>
+            <div>
+              <input id="CVCInput" type="text" placeholder="e.g. 123" data-field="CVC" oninput="handleInputChange(this)" onchange="validateBlankInput(this)" />
+              <div class="error" data-error-field="CVC"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-element">
+          <button onclick="submitForm()">Confirm</button>
+        </div>
+      </div>
+      <div id="form-complete" style="display: none;">
+        <img src="images/icon-complete.svg" alt="complete" width="60" style="margin-bottom: 30px;">
+        <div id="title">Thank you!</div>
+        <div id="subtitle">We've added your card details</div>
+        <button>Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="code.js"></script>
+</body>
+</html>
